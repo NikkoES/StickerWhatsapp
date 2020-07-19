@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ff000000"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:background="#ff000000"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/img"
+        android:background="#ffffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/add"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/add"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/edit"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/delete"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

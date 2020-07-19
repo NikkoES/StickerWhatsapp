@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffeeeeee"
+        android:theme="@style/AppTheme.LightActionBar"
+        app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/icon"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Official Stickers from LuckyNine Apps"
+        android:layout_toRightOf="@id/icon"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/text02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_toRightOf="@id/icon"
+        android:layout_below="@id/text02"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/stickers_size"
+        android:text="Hello, world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/stickers"
+        android:layout_above="@+id/ad"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/stickers_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/text01"
+        android:text="@string/text9"
+        android:textColor="#ff888888"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progress"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:drawableLeft="@drawable/wa_logo"
+        android:layout_above="@+id/ad"
+        android:background="@drawable/bg11"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#ffffffff"
+        android:stateListAnimator="@null"
+        android:text="Add to WhatsApp"
+        android:onClick="addToWhatsApp"
+        android:layout_height="45dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ad"
+        ads:adUnitId="@string/banner_ad_id_bottom"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

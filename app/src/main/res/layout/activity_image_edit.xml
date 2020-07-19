@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:background="@drawable/bg_placeholder"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/img_toolbar"
+        android:id="@+id/img"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/action_toolbar"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg07"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/undo"
+            android:clickable="true"
+            android:onClick="undo"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg08"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/undo"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/redo"
+            android:clickable="true"
+            android:onClick="redo"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg08"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/redo"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/crop"
+            android:clickable="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg08"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/crop"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rotate"
+            android:clickable="true"
+            android:onClick="rotate"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg08"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/rotate"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remove"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg08"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/remove"
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_above="@+id/ad"
+        android:id="@+id/img_toolbar"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ADD IMAGE -->
+
+        <RelativeLayout
+            android:id="@+id/add_image"
+            android:clickable="true"
+            android:onClick="addImage"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon01"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/image"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/icon01"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff"
+                android:text="@string/text47"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <!-- ADD EMOTICON -->
+
+        <RelativeLayout
+            android:id="@+id/add_emoticon"
+            android:clickable="true"
+            android:onClick="addEmoticon"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon03"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/emoticon"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/icon03"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff"
+                android:text="@string/text49"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <!-- ADD CLIP ART -->
+
+        <RelativeLayout
+            android:id="@+id/add_clip"
+            android:clickable="true"
+            android:onClick="addClipArt"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon02"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/clipart"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/icon02"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff"
+                android:text="@string/text48"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <!-- ADD TEXT -->
+
+        <RelativeLayout
+            android:id="@+id/add_text"
+            android:clickable="true"
+            android:onClick="addText"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon04"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/text"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/icon04"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff"
+                android:text="@string/text50"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ad"
+        ads:adUnitId="@string/banner_ad_id_bottom"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

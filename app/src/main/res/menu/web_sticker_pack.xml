@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/add_sticker"
+        android:title="@string/text18"/>
+    <item android:id="@+id/change_tray"
+        android:title="@string/text20"/>
+    <item android:id="@+id/delete"
+        android:title="@string/text19"/>
+</menu>

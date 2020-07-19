@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luckynineapps.stickersmaker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".StickerContentProvider"
+            android:authorities="com.luckynineapps.stickersmaker.stickercontentprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="WhatsApp Stickers" />
+        <activity android:name=".ViewAllStickersActivity" />
+        <activity
+            android:name=".ImageCropperActivity"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".TestActivity" />
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity
+            android:name=".ImageEditActivity"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".EmoticonSelectorActivity" />
+        <activity android:name=".ClipArtSelectorActivity" />
+        <activity android:name=".ViewAllWebStickersActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3950402057146083~3330275770" />
+
+        <activity android:name=".PrivacyPolicyActivity" />
+        <activity android:name=".TermsActivity" />
+        <activity android:name=".ShowCrashActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a1ad5970c26765074f79dfe29be65743c2dc53d6" />
+    </application>
+
+</manifest>

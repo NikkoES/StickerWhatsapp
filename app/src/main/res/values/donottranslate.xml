@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">New Stickers</string>
+    <string name="admob_app_id">ca-app-pub-3950402057146083~3330275770</string>
+    <string name="banner_ad_id_top">ca-app-pub-3950402057146083/1634050728</string>
+    <string name="banner_ad_id_bottom">ca-app-pub-3950402057146083/4942740348</string>
+    <string name="interstitial_ad_id">ca-app-pub-3950402057146083/8074378132</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

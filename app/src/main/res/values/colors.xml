@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff4b4b4b</color>
+    <color name="colorPrimaryDark">#ff3d3d3d</color>
+    <color name="colorAccent">#ff2ecc71</color>
+    <color name="colorLight">#ff888888</color>
+    <color name="linkColor">#FF74b9ff</color>
+    <color name="selectedLinkColor">#ff3498db</color>
+    <color name="black">#ff555555</color>
+    <color name="semi_black">#ff777777</color>
+    <color name="color01">#ff000000</color>
+    <color name="blue">#ff3498db</color>
+    <color name="green">#ff009688</color>
+    <color name="light_green">#55009688</color>
+</resources>

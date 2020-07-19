@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "424424430089",
+    "firebase_url": "https://sticker-wa.firebaseio.com",
+    "project_id": "sticker-wa",
+    "storage_bucket": "sticker-wa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424424430089:android:638ffbf15d11a48d",
+        "android_client_info": {
+          "package_name": "com.luckynineapps.stickersmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424424430089-8s9uahsq5i0in0fi0sbo1e3qundb710p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrOvT-iNwp7vnxeNFWv89rgF47uwisHaE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

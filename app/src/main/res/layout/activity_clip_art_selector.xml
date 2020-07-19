@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="#ff000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        app:tabBackground="@color/color01"
+        app:tabIndicatorColor="#ffffffff"
+        app:tabSelectedTextColor="#ffffffff"
+        app:tabTextColor="#ffffffff"
+        app:tabMode="scrollable"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_above="@+id/ad"
+        android:layout_below="@id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ad"
+        android:visibility="gone"
+        ads:adUnitId="@string/banner_ad_id_bottom"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
